@@ -52,12 +52,12 @@
                           role: event.data.role,
                           timestamp: Date.now()
                       };
-                      unityInstance.SendMessage('LucidPortalBridge', 'ReceiveMessage', JSON.stringify(message));
+                      unityInstance.SendMessage('LucidPortalBridge2', 'ReceiveMessage', JSON.stringify(message));
                   }
 
                   // Handle interaction mirroring for viewers
                   if (event.data && event.data.type === 'mirrorInteraction') {
-                      unityInstance.SendMessage('LucidPortalBridge', 'ReceiveMessage', JSON.stringify(event.data));
+                      unityInstance.SendMessage('LucidPortalBridge2', 'ReceiveMessage', JSON.stringify(event.data));
                   }
               });
 
